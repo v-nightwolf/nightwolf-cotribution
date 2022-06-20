@@ -416,6 +416,15 @@ The output of above script will look like this:
         
 ## Troubleshooting Linux OS network performance Issues
 
+
+
+---
+
+If you have any feedback or suggestion for the content of this website, please use the [feedbacks and suggestions form](https://nightwolf.in/contribute/) for the same.  All the [feedbacks and suggestions](https://nightwolf.in/contribute/) are most welocome.
+
+
+---
+
 {!multiplex-ads.md!}
 
 ---

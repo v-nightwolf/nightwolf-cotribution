@@ -6,6 +6,8 @@
 
   All the [feedbacks and suggestions](https://nightwolf.in/contribute/) are most welocome.
 
+ {!inpage-ads.md!}
+
 ---
 
 ### Basic DBMS Interview Questions
@@ -19,6 +21,7 @@
 7.  Are NULL values in a database the same as that of blank space or zero?
 
 
+{!horizontal-ads.md!}
 
 ### Intermediate DBMS Interview Questions
 
@@ -32,6 +35,8 @@
 15.  What is meant by normalization and denormalization?
 
 
+{!horizontal-ads.md!}
+
 ### Advanced DBMS Interview Questions
 
 16.  Explain different types of Normalization forms in a DBMS.
@@ -41,3 +46,6 @@
 
 ---
 <br>
+
+{!footer.md!}
+

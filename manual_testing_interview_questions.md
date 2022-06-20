@@ -6,6 +6,8 @@
 
   All the [feedbacks and suggestions](https://nightwolf.in/contribute/) are most welocome.
 
+ {!inpage-ads.md!}
+
 ---
 
 1. What is Software Testing?
@@ -449,6 +451,9 @@
             error that is very glaring and easily identifiable to human(manual QA).
           - Even with some minor change in application, script updation and maintenance is required.
 
+{!horizontal-ads.md!}
 
 ---
 <br>
+
+{!footer.md!}
