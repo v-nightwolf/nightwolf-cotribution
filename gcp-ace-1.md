@@ -1,7 +1,6 @@
-# Google Cloud Associate Cloud Engineer Practice Exam 1 : 
-
-<br>
-These are GCP ACE(Google Cloud Platform Associate Cloud Engineer) certification practice questions for professionals who are aspired to be GCP ACE certified. You will find these questions very helpful in your GCP-ACE certification and interviews. Prepare well and All the very best.
+# Google Cloud Associate Cloud Engineer Practice Exam - 1: 
+---
+These are top 40 GCP ACE(Google Cloud Platform Associate Cloud Engineer) certification practice questions/cheatsheet (GCP ACE exam dumps) for professionals who are aspired to be GCP ACE certified. You will find these GCP ACE questions and answers very helpful in your GCP-ACE certification and interviews. Prepare well and All the very best.
 <br>
 
   All the [feedbacks and suggestions](https://nightwolf.in/contribute/) are most welocome.
@@ -780,20 +779,11 @@ configurations for use with the command line interface. What command would you u
             the same organization but different projects will not run on the same sole tenant instance.
     Reference: <a target="_blank" href=https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes>https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes</a>
 
-    ---
+---
 
-41. You want to run a Kubernetes cluster for a high availability set of applications. What type of cluster would you use?
+[<h3 style="text-align: center;font-family: cursive;">Next Page</h3>](gcp-ace-2.md)
 
-        a). Multi-regional
-        b). Single zone
-        c). Regional
-        d). Multi-zonal
+---
+<br>
+{!footer.md!}
 
-        Correct: c
-
-        Explanation:
-            Regional clusters have replicas of the control plane while single zone and multi-zonal clusters
-            have only one control plane. There is no such thing as multi-regional cluster. 
-    Reference: <a target="_blank" href=https://cloud.google.com/blog/products/containers-kubernetes/best-practicesfor-
-creating-a-highly-available-gke-cluster>https://cloud.google.com/blog/products/containers-kubernetes/best-practicesfor-
-creating-a-highly-available-gke-cluster</a>
