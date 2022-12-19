@@ -1,5 +1,3 @@
-<h4 style="text-align: right;"> {!visits.md!} </h4>
-
 # Advanced Linux Interview Questions for Experienced Linux Admins - Solved
 <br>
     We have prepared a set of questions to help Experienced Linux Admins in their preparations for Interview.

@@ -1,9 +1,11 @@
 # Google Cloud Associate Cloud Engineer Practice Exam - 1: 
 ---
-These are top 40 GCP ACE(Google Cloud Platform Associate Cloud Engineer) certification practice questions/cheatsheet (GCP ACE exam dumps) for professionals who are aspired to be GCP ACE certified. You will find these GCP ACE questions and answers very helpful in your GCP-ACE certification and interviews. Prepare well and All the very best.
+These are top 50 GCP ACE(Google Cloud Platform Associate Cloud Engineer) certification practice questions/cheatsheet (GCP ACE exam dumps) for professionals who are aspired to be GCP ACE certified. You will find these GCP ACE questions and answers very helpful in your GCP-ACE certification and interviews. Prepare well and All the very best.
 <br>
 
   All the [feedbacks and suggestions](https://nightwolf.in/contribute/) are most welocome.
+
+ {!inpage-ads.md!}
 
 ---
 
@@ -779,8 +781,193 @@ configurations for use with the command line interface. What command would you u
             the same organization but different projects will not run on the same sole tenant instance.
     Reference: <a target="_blank" href=https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes>https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes</a>
 
----
+    ---
 
+41. You want to run a Kubernetes cluster for a high availability set of applications. What type of cluster would you use? 
+
+        a). Multi-regional
+        b). Single zone
+        c). Regional
+        d). Multi-zonal
+
+        Correct: c
+
+        Explanation:
+            Regional clusters have replicas of the control plane while single zone and multi-zonal clusters
+            have only one control plane. There is no such thing as multi-regional cluster.
+    Reference: <a target="_blank" href=https://cloud.google.com/blog/products/containers-kubernetes/best-practices-for-creating-a-highly-available-gke-cluster>https://cloud.google.com/blog/products/containers-kubernetes/best-practices-for-creating-a-highly-available-gke-cluster</a>
+
+    ---
+
+42. A large enterprise has created multiple organizations in GCP. They would like to connect
+the VPC networks across organizations. What should they do?
+
+        a). Implement a Shared VPC
+        b). Implement VPC Network Peering between VPCs
+        c). Implement a VPN between VPCs
+        d). Define firewall rules to allow egress traffic to other VPC networks
+
+        Correct: b
+
+        Explanation:
+            Since the connected networks are in different organizations, they must use VPC Network
+            Peering. VPC sharing is only available within a single organization. Firewall rule changes may
+            be needed, but that is not sufficient. VPNs are used to connect GCP networks with on premises
+            networks.
+    Reference: <a target="_blank" href=https://cloud.google.com/vpc/docs/vpc-peering>https://cloud.google.com/vpc/docs/vpc-peering</a>
+
+    ---
+
+43. You are creating a set of virtual machines in Compute Engine. GCP will automatically
+assign an IP address to each. What type of IP address will be assigned?
+
+        a). Regional external address
+        b). Global internal address
+        c). Regional internal address
+        d). Global external address
+
+        Correct: c
+
+        Explanation:
+            GCP assigns regional internal IP addresses for VM instances, including GKE pods, nodes, and
+            services. They are also used for Internal TCP/UDP Load Balancing and Internal HTTP(S) Load
+            Balancing. 
+    Reference: <a target="_blank" href=https://cloud.google.com/compute/docs/ip-addresses>https://cloud.google.com/compute/docs/ip-addresses</a>
+
+    ---
+
+44. You have created a target pool with instances in two zones which are in the same region.
+The target pool is not functioning correctly. What could be the cause of the problem?
+
+        a). The target pool is not sending logs to Cloud Logging.
+        b). The target pool is missing a health check.
+        c). The target pool nodes are configured with different memory specifications
+        d). The target pool is not sending metrics to Cloud Monitoring.
+
+        Correct: b
+
+        Explanation:
+            Target pools must have a health check to function properly. Nodes can be in different zones but
+            must be in the same region. Cloud Monitoring and Cloud Logging are useful but they are not
+            required for the target pool to function properly. Nodes in a pool have the same configuration.
+    Reference: <a target="_blank" href=https://cloud.google.com/load-balancing/docs/target-pools>https://cloud.google.com/load-balancing/docs/target-pools</a>
+
+    ---
+
+45. A manager in your company is having trouble tracking the use and cost of resources across
+several projects. In particular, they do not know which resources are created by different
+teams they manage. What would you suggest the manager use to help better understand which resources are used by which team?
+
+        a). IAM policies
+        b). Trace logs
+        c). Audit logs
+        d). Labels
+
+        Correct: d
+
+        Explanation:
+            Labels are key-value pairs attached to resources and used to manage them. The manager could
+            use a key-value pair with the key 'team-name' and the value the name of the team that created the
+            resource. Audit logs do not necessarily have the names of teams that own a resource. Traces are
+            used for performance monitoring and analysis. IAM policies are used to control access to
+            resources, not to track which team created them. 
+    Reference: <a target="_blank" href=https://cloud.google.com/resource-manager/docs/creating-managing-labels>https://cloud.google.com/resource-manager/docs/creating-managing-labels</a>
+
+    ---
+
+46. The CFO of your company wants to improve an existing data warehouse by migrating it to
+Google Cloud. They want to minimize operational overhead while ensuring existing SQL
+tools can be used with the migrated data warehouse. What GCP service would you recommend?
+
+        a). Cloud SQL
+        b). Cloud Spanner
+        c). Bigtable
+        d). BigQuery
+
+        Correct: d
+
+        Explanation:
+            BigQuery is a managed, petabyte scale data warehouse, which uses SQL. Bigtable does not
+            support SQL. Cloud SQL and Cloud Spanner support SQL but are designed for transaction
+            processing, not analytical applications like data warehouses. 
+    Reference: <a target="_blank" href=https://cloud.google.com/bigquery/docs/how-to>https://cloud.google.com/bigquery/docs/how-to</a>
+
+    ---
+
+47. A software development team is using Google Container Registry to manage container
+images. You have recently joined the team and want to view metadata about existing
+container images. What command would you use?
+
+        a). gcloud container images list
+        b). gcloud container metadata list
+        c). gcloud images container list
+        d). gcloud container list metadata
+
+        Correct: a
+
+        Explanation:
+            The correct command is gcloud container images list. The other options are not valid gcloud
+            commands. For more information, see
+    Reference: <a target="_blank" href=https://cloud.google.com/sdk/gcloud/reference/container/images/list>https://cloud.google.com/sdk/gcloud/reference/container/images/list</a>
+
+    ---
+
+48. Kubernetes Engine collects application logs by default when the log data is written where?
+
+        a). SYSLOG
+        b). SYSERR
+        c). STDERR
+        d). STDOUT
+
+        Correct: c, d
+
+        Explanation:
+            Kubernetes Engine collects log data written to standard output (STDOUT) and standard error
+            (STDERR). 
+    Reference: <a target="_blank" href=https://cloud.google.com/blog/products/management-tools/using-logging-your-apps-running-kubernetes-engine>https://cloud.google.com/blog/products/management-tools/using-logging-your-apps-running-kubernetes-engine</a>
+
+    ---
+
+49. A startup is implementing an IoT application that will ingest data at high speeds. The
+architect for the startup has decided that data should be ingested in a queue that can store
+the data until the processing application is able to process it. The architect also wants to use
+a managed service in Google Cloud. What service would you recommend?
+
+        a). Bigtable
+        b). Cloud Dataflow
+        c). Cloud Pub/Sub
+        d). Cloud Dataproc
+
+        Correct: c
+
+        Explanation:
+            Cloud Pub/Sub is a queuing service that is used to ingest data and store it until it can be
+            processed. Bigtable is a NoSQL database, not a queueing service. Cloud Dataflow is a stream
+            and batch processing service, not a queueing service. Cloud Dataproc is a managed Spark/Hadoop service.
+    Reference: <a target="_blank" href=https://cloud.google.com/pubsub/docs/overview>https://cloud.google.com/pubsub/docs/overview</a>
+
+    ---
+
+50. To avoid potentially violating a regulation, your company has determined that it will only
+use GCP resources in North America. How would you ensure no resources are created outside of North America?
+
+        a). Create a data lifecycle management policy that prevents data from being saved outside of North America.
+        b). Create an Cloud Audit policy that prevents users from creating resources outside of North America.
+        c). Create a policy at the folder level of the resource hierarchy that includes a constraint using a
+            Resource Location Restriction.
+        d). Create a policy at the organization level of the resource hierarchy that includes a constraint
+            using a Resource Location Restriction.
+
+        Correct: d
+
+        Explanation:
+            Constraints are the standard way to restrict where resources can be created and applying policies
+            with constraints will enforce those constraints for all resources in the organization. If the policy
+            were applied at the folder level, it would have to be applied for all folders and that is not as
+            efficient as applying at the organization level. There is no such thing as a Cloud Audit policy.
+    Reference: <a target="_blank" href=https://cloud.google.com/resource-manager/docs/organizationpolicy/defining-locations>https://cloud.google.com/resource-manager/docs/organizationpolicy/defining-locations</a>
+
+---
 [<h3 style="text-align: center;font-family: cursive;">Next Page</h3>](gcp-ace-2.md)
 
 ---

@@ -63,6 +63,8 @@ Isolating work in branches, changing context, and integrating changes
 
 ---
 
+ {!inpage-ads.md!}
+
 ## INSPECT & COMPARE
 
 Examining logs, diffs and object information

@@ -2,8 +2,9 @@
 ---
 Redhat and Ubuntu OS families have different package management tools like yum and apt. As an Administrator, we need to have the commands ready for any package mgmt related work for both the OS families. We have outlined few commands which comes handy in such scenarios. 
 
-
 ---
+
+{!inpage-ads.md!}
 
 ## General Packaging System Information
 
@@ -30,6 +31,8 @@ Redhat and Ubuntu OS families have different package management tools like yum a
 
 
 ---
+{!inpage-ads.md!}
+
 <br>
 
 ## Package Information
@@ -62,6 +65,8 @@ Redhat and Ubuntu OS families have different package management tools like yum a
 |Remove header files from the local cache directory (forcing a new download of same on next use) |yum clean headers |apt-file purge |
 
 ---
+{!inpage-ads.md!}
+
 <br>
 
 ## Package File Information
@@ -76,3 +81,8 @@ Redhat and Ubuntu OS families have different package management tools like yum a
 | Find package that installed a file|rpm -qf filename |dpkg --search filename |
 |Find package that provides a particular file |yum provides filename |apt-file search filename |
 
+
+---
+
+<br>
+{!footer.md!}
