@@ -5,8 +5,8 @@ These are top 50 GCP ACE(Google Cloud Platform Associate Cloud Engineer) certifi
 
   All the [feedbacks and suggestions](https://nightwolf.in/contribute/) are most welocome.
 
+---
  {!inpage-ads.md!}
-
 ---
 
 1. You have a Cloud Datastore database that you would like to backup. You'd like to issue a

@@ -5,8 +5,8 @@ These are top 100 GCP ACE(Google Cloud Platform Associate Cloud Engineer) certif
 
   All the [feedbacks and suggestions](https://nightwolf.in/contribute/) are most welocome.
 
+---
 {!inpage-ads.md!}
-
 ---
 
 1. A team of developers would like to have a standard work environment in Compute Engine.
@@ -635,11 +635,435 @@ how much the query will cost before running the query. How would recommend they 
 
     ---
 
-    Reference: <a target="_blank" href=></a>
-    Reference: <a target="_blank" href=></a>
-    Reference: <a target="_blank" href=></a>
-    Reference: <a target="_blank" href=></a>
-    Reference: <a target="_blank" href=></a>
+31. You are administering a project that uses BigQuery. You would like to list all the datasets
+in the project. What command would you use?
+
+        a). bq ls
+        b). gsutil ls
+        c). gsutil dir
+        d). bq dir
+
+        Correct: a
+
+        Explanation:
+            BigQuery uses the bq command line and the command to list datasets is bq ls. bq dir is not a
+            valid bq command. Gsutil is the command line utility used with Cloud Storage not BigQuery.
+    Reference: <a target="_blank" href=https://cloud.google.com/bigquery/docs/reference/bq-cli-reference>https://cloud.google.com/bigquery/docs/reference/bq-cli-reference</a>
+
+    ---
+
+32. You believe you may have over provisioned several VMs. You would like to get data on the
+CPU load at 15 minute intervals from all Linux servers. How would you do this with the least amount of work?
+
+        a). Install the Prometheus agent on each server and monitor the load_15m metric.
+        b). Install a bash script that uses the sar -u command to get CPU utilization and write the value to sysout.
+        c). Install the Cloud Monitoring agent on each server and monitor the load_15m metric.
+        d). Install a bash script that uses the sar -u command to get CPU utilization and write the value to syslog.
+
+        Correct: c
+
+        Explanation:
+            The Cloud Monitoring agent collects data on CPU utilization and other metrics. Installing the
+            agent and then view the collected data with Cloud Monitoring requires the least amount of work.
+            Installing a bash script that uses the sar -u command to get CPU utilization and write the value to
+            syslog or sysout would work but would require you to write and maintain the script. Prometheus
+            is an open source monitoring tool that could be used but you would need to install, configure,
+            and maintain it.
+    Reference: <a target="_blank" href=https://cloud.google.com/monitoring/agent/installation>https://cloud.google.com/monitoring/agent/installation</a>
+
+    ---
+
+33. You have deployed a service using App Engine that requires a batch job run every hour.
+You notice that the batch job is running every two hours instead of every hour. You'd like
+to change the job specification to correct the problem. What file would you edit to correct the problem?
+
+        a). app.yaml
+        b). batch.yaml
+        c). job.yaml
+        d). cron.yaml
+
+        Correct: d 
+
+        Explanation:
+            Cron.yaml files contain specifications for running scheduled jobs in App Engine. App.yaml has
+            overall application specifications. Batch.yaml and job.yaml are not specified as part of App
+            Engine services. 
+    Reference: <a target="_blank" href=https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml>https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml</a>
+
+    ---
+
+34. You want to create an autoscaling Kubernetes cluster in Kubernetes Engine. Which of the
+following commands would you specify?
+
+        a). kubectl containers create with --enable-autoscaling flag and --min-nodes and max-nodes parameters.
+        b). gcloud container clusters create with --enable-autoscaling flag and --min-nodes and maxnodes parameters.
+        c). gcloud kubernetes clusters create with --enable-autoscaling flag and --min-nodes and maxnodes parameters.
+        d). kubectl clusters create with --enable-autoscaling flag and --min-nodes and max-nodes parameters.
+
+        Correct: b
+
+        Explanation:
+            The correct command is gcloud container clusters create with --enable-autoscaling flag and --min-nodes
+            and max-nodes parameters. Kubectl is a command line for managing resources, such as pods, within a
+            Kubernetes cluster so the options kubectl clusters create with --enableautoscaling flag and
+            --min-nodes and max-nodes parameters and kubectl containers create with --enable-autoscaling flag and
+            --min-nodes and max-nodes parameters are incorrect. The option gcloud kubernetes clusters create with
+            --enable-autoscaling flag and --min-nodes and max-nodes parameters is incorrect because it specifies
+            gcloud kubernetes instead of gcloud containers.
+            (Kubernetes Engine was originally named Container Engine. When the service name was changed, the gcloud
+            command was not changed to reflect the new service name). 
+    Reference: <a target="_blank" href=https://cloud.google.com/sdk/gcloud/reference/container/clusters/create>https://cloud.google.com/sdk/gcloud/reference/container/clusters/create</a>
+
+    ---
+
+35. You need to deploy a load balancer that will support external clients using TCP traffic,
+including SSL. You want to offload SSL processing. What load balancer would you deploy?
+
+        a). SSL Proxy
+        b). The explanation was pasted here. Was "Internal HTTP(S) Load Balancing" supposed to go here, like
+            the question below?
+        c). TCP Proxy
+        d). Network TCP/UDP Load Balancing
+
+        Correct: a
+
+        Explanation:
+            The correct answer is the SSL Proxy, which should be used for external TCP traffic with the SSL
+            processing offloaded to the the proxy. Network TCP/UDP Load Balancing is used for internal TCP traffic.
+            A network load balancer distributes TCP or UDP traffic among virtual machine (VM) instances in the same
+            region.
+    Reference: <a target="_blank" href=https://cloud.google.com/loadbalancing/docs/load-balancing-overview>https://cloud.google.com/loadbalancing/docs/load-balancing-overview</a> <br>
+    Reference: <a target="_blank" href=https://cloud.google.com/loadbalancing/docs/choosing-load-balancer>https://cloud.google.com/loadbalancing/docs/choosing-load-balancer</a>
+
+    ---
+
+36. You have created a virtual private cloud (VPC) in auto mode, which automatically creates
+a subnet in each region. How is the CIDR block determined for each region?
+
+        a). Each region will automatically be assigned a set of predefined IP ranges that fit within the
+            10.128.0.0/9 CIDR block.
+        b). You will specify non-overlapping CIDR blocks for each region.
+        c). You will specify non-overlapping CIDR ranges for the set of regions you want a subnet created for.
+        d). Each region will be automatically assigned a range of external IP addresses.
+
+        Correct: a
+
+        Explanation:
+            When using auto mode VPC creation, a subnet is created in each region and each subnet is assigned a
+            range of IP addresses that fit within the 10.128.0.0/9 CIDR block. You do not have to specify CIDR
+            blocks in auto mode so both of the options, You will specify non-overlapping CIDR blocks for each
+            region and You will specify non-overlapping CIDR ranges for the set of regions you want a subnet
+            created for, are incorrect. External addresses are not assigned in auto mode, so the option each
+            region will be automatically assigned a range of external IP addresses is incorrect. 
+    Reference: <a target="_blank" href=https://cloud.google.com/vpc/docs/using-vpc>https://cloud.google.com/vpc/docs/using-vpc</a>
+
+    ---
+
+37. A colleague who is new to GCP has asked for your help with understanding predefined
+roles. They would like to know details about several predefined roles. What command
+would you suggest they use? [ROLE-ID] indicates where to specify the role identifier in the command.
+
+        a). gcloud iam roles describe [ROLE-ID]
+        b). gcloud roles predefined describe [ROLE-ID]
+        c). gcloud iam roles list [ROLE-ID]
+        d). gcloud roles predefined describe [ROLE-ID]
+
+        Correct: a 
+
+        Explanation:
+            gcloud iam roles describe [ROLE-ID] is the correct command for displaying information about a role.
+            The options gcloud roles predefined describe [ROLE-ID] and gcloud roles predefined describe [ROLE-ID]
+            are missing the term iam, which is needed to indicate the gcloud command is for the Identity and
+            Access Management service. The option gcloud iam roles list [ROLE-ID] uses list instead of describe.
+            List is typically used to see short descriptions of multiple resources while describe is typically
+            used to see more detailed information about a resource. 
+    Reference: <a target="_blank" href=https://cloud.google.com/sdk/gcloud/reference/iam/roles/describe>https://cloud.google.com/sdk/gcloud/reference/iam/roles/describe</a>
+
+    ---
+
+38. Your team uses a number of custom images. You want to be able to release new versions of
+each image while still maintaining the ability to rollback to a previous version if needed.
+What feature of Compute Engine would you use for this purpose?
+
+        a). community supported images
+        b). managed instance groups
+        c). image families
+        d). unmanaged instance groups
+
+        Correct: c
+
+        Explanation:
+            Image families are used to group related images together so you can roll forward or back
+            between specific images versions. Image families always point to the latest version of an image
+            that is not deprecated. Managed and unmanaged instance groups are types of clusters, not an
+            image management feature. Community supported images not directly supported by Compute
+            Engine and are maintained by community members. 
+
+    ---
+
+39. You are hosting a large amount of image and video content for an educational service.
+Learners from around the world use the service. You currently host content on servers in
+your own data center in North America. Learners in Asia, Africa, and Europe experience
+long latencies loading content. What GCP service could you use to ensure that all learners
+experience the same level of latency and the latency is kept low, especially for frequently
+accessed content?
+
+        a). Persistent disks
+        b). Cloud CDN
+        c). Cloud Storage Nearline Storage Class
+        d). Cloud VPN
+
+        Correct: b
+
+        Explanation:
+            Cloud CDN is a content distribution network for global content delivery. It caches data at
+            distributed points around the world so users requests for content are routed to the closest content
+            location. Cloud Storage Nearline Storage Class is appropriate for content that is only accessed
+            once or less per month. Cloud VPNs are used to link Google Cloud network to external networks,
+            such as an on premises data center network. Persistent disks are used to store data on virtual
+            machines and could be used if you were to deploy and manage VMs across multiple regions but that
+            would be less efficient than using Cloud CDN. 
+    Reference: <a target="_blank" href=https://cloud.google.com/cdn/docs/overview>https://cloud.google.com/cdn/docs/overview</a>
+
+    ----
+
+40. Due to security concerns, you want to ensure all data written to your Cloud Storage
+buckets are encrypted. What do you need to do to ensure data is encrypted when stored in Cloud Storage?
+
+        a). Set up customer managed encryption keys and use those keys to encrypt data before saving to Cloud Storage.
+        b). Set a lifecycle policy that specifies encryption is on.
+        c). Use the --encrypt flag with gsutil
+        d). Nothing, this is the default behavior.
+
+        Correct: d
+
+        Explanation:
+            All data stored in Google Cloud is encrypted before it is persisted. You do not have to do
+            anything to ensure your data is encrypted at rest in GCP. You may set up customer managed
+            encryption keys if you want to control how keys are managed but it is not necessary. There is no
+            --encrypt flag with gsutil. There is no encryption option with lifecycle management policies. 
+    Reference: <a target="_blank" href=https://cloud.google.com/storage/docs/encryption>https://cloud.google.com/storage/docs/encryption</a>
+
+    ---
+
+41. A startup is developing an Internet of Things (IoT) service. When data is first ingested,
+some basic data quality checks are performed that ensure the format is correct. The checks
+are simple Python functions that apply regular expression checks. The data will be ingested
+using Pub/Sub. When new data arrives, it should be automatically have the quality checks
+applied. The checks will always run for less than one second. What compute service would
+you use to apply the data quality checks?
+
+        a). App Engine Standard
+        b). Compute Engine
+        c). Cloud Functions
+        d). App Engine Flexible
+
+        Correct: c
+
+        Explanation:
+            Cloud Functions are the best option since it is a managed service that can be invoked on events,
+            such as when a message is ingested by Cloud Pub/Sub. Cloud Functions support Python. Also
+            the code to execute runs for short periods of time. Compute Engine could be used but you would
+            be charged for time the VM is running even if it were not processing data and would require
+            more management than Cloud Functions, which is serverless. App Engine Standard and App
+            Engine Flexible could be used but they provide more functionality than is needed to run simple
+            Python functions applying regular expression checks and require more configuration than Cloud Functions.
+    Reference: <a target="_blank" href=https://cloud.google.com/functions/docs/concepts/overview>https://cloud.google.com/functions/docs/concepts/overview</a> <br>
+    Reference: <a target="_blank" href=https://cloud.google.com/functions/docs/tutorials/pubsub>https://cloud.google.com/functions/docs/tutorials/pubsub</a>
+
+    ---
+
+42. A team providing business intelligence solutions to your company is migrating to GCP.
+They make extensive use of SQL and want to continue to use SQL. They currently use
+relational databases to store data. Data is loaded every night. When data is older than 3
+years, it is no longer needed. They expect the database to grow to 100 GB within six
+months. Most of the operations on the database query a few columns but scan many rows.
+They also want to minimize database management overhead. What GCP service would you
+recommend they use?
+
+        a). Bigtable
+        b). BigQuery
+        c). Cloud Firestore
+        d). Cloud SQL
+
+        Correct: b
+
+        Explanation:
+            BigQuery is the best option. BigQuery is a managed analytical database that supports SQL. It is
+            optimized for write once/read many operations. It can easily store 100 GB or more of data. It is a
+            managed service designed to support data warehouses. Bigtable and Cloud Firestore are NoSQL
+            databases and do not support SQL. Cloud SQL does support SQL but it is designed for
+            transaction processing and does not support up to 100 GB in a single database. 
+    Reference: <a target="_blank" href=https://cloud.google.com/solutions/migration/dw2bq/dw-bq-migrationoverview>https://cloud.google.com/solutions/migration/dw2bq/dw-bq-migrationoverview</a>
+
+    ---
+
+43. To improve security of your applications, you want to create several custom roles with
+limited permissions. What role would give you sufficient permission to create custom roles?
+
+        a). roles/iam.roles.create.custom
+        b). roles/iam.serviceAccountUser
+        c). roles/iam.roles.create
+        d). roles/iam.serviceAccountUser.create
+
+        Correct: c
+
+        Explanation:
+            The role roles/iam.roles.create will provide the permissions required to create custom roles.
+            roles/iam.roles.create.custom is not a valid option. roles/iam.serviceAccountUser is used to grant
+            an identity access to a service account. roles/iam.serviceAccountUser.create is not a valid option.
+    Reference: <a target="_blank" href=https://cloud.google.com/iam/docs/creating-custom-roles>https://cloud.google.com/iam/docs/creating-custom-roles</a>
+    Reference: <a target="_blank" href=https://cloud.google.com/iam/docs/understanding-custom-roles>https://cloud.google.com/iam/docs/understanding-custom-roles</a>
+
+    ---
+
+44. A system admin needs to be able to create an instance that runs as a service account,
+attaches a persistent disk to an instance that runs as a service account, and set instance
+metadata on an instance that runs as a service account. Which of the following roles are
+required to meet those requirements?
+
+        a). roles/compute.instanceAdmin.v1
+        b). roles/compute.imageUser
+        c). roles/compute.storageAdmin
+        d). roles/iam.serviceAccountCreator
+        e). roles/iam.serviceAccountUser
+
+        Correct: a, e
+
+        Explanation:
+            2 roles are required: roles/compute.instanceAdmin.v1 and roles/iam.serviceAccountUser. The
+            roles/compute.instanceAdmin.v1 role gives full control of Compute Engine instances, instance
+            groups, disks, snapshots, and images. The roles/iam.serviceAccountUser role gives permission to
+            run operations as the service account. roles/compute.storageAdmin gives only permissions to
+            create, modify, and delete disks, images, and snapshots, which are available by
+            roles/compute.instanceAdmin.v1. roles/iam.serviceAccountCreator gives permission to create
+            service accounts. 
+    Reference: <a target="_blank" href=https://cloud.google.com/compute/docs/access/iam>https://cloud.google.com/compute/docs/access/iam</a>
+
+    ---
+
+45. You are considering running a Windows server in GCP. You would like to review a list of
+Windows Server images available. What command would you use?
+
+        a). gcloud compute list windows-cloud
+        b). gcloud compute images list --project windows-cloud --no-standard-images
+        c). gcloud compute images describe --project windows-cloud --no-standard-images
+        d). gcloud compute instances describe windows-cloud
+
+        Correct: b
+
+        Explanation:
+            The command gcloud compute images list --project windows-cloud --no-standard-images will
+            list Windows Server images. List provides a list of images with minimal information. Describe is
+            used to show more detailed information. The options gcloud compute list windows-cloud, gcloud
+            compute images describe --project windows-cloud --no-standard-images, and gcloud compute instances
+            describe windows-cloud are not a valid gcloud command, the term windows-cloud is not used in gcloud
+            compute commands.
+    Reference: <a target="_blank" href=https://cloud.google.com/sdk/gcloud/reference/compute/images/list>https://cloud.google.com/sdk/gcloud/reference/compute/images/list</a>
+
+    ---
+
+46. You have just taken over responsibility to manage a large number of objects in Cloud
+Storage. You are reviewing a random sample of objects and want to know the creation time
+and content type for those objects. You plan to write a shell script to display this data.
+What command would you use in your script to retrieve that metadata?
+
+        a). gsutil stat gs://BUCKET_NAME/OBJECT_NAME
+        b). gsutil list gs://BUCKET_NAME/OBJECT_NAME
+        c). gsutil metadata gs://BUCKET_NAME/OBJECT_NAME
+        d). gsutil describe gs://BUCKET_NAME/OBJECT_NAME
+
+        Correct: a
+
+        Explanation:
+            The correct command to list that metadata is gsutil stat gs://BUCKET_NAME/OBJECT_NAME.
+            gsutil metadata is not a valid gsutil command. gsutil list is not a valid command, instead gsutil ls
+            is used to list bucket information. gsutil describe is not a valid command. Describe is often used
+            with gcloud commands, but not gsutil. 
+    Reference: <a target="_blank" href=https://cloud.google.com/storage/docs/gsutil/commands/stat>https://cloud.google.com/storage/docs/gsutil/commands/stat</a>
+
+    ---
+
+47. A client of yours needs to be sure that only applications from the same project run on a
+physical server. For example, two applications from Project A may run on VMs deployed
+to a single physical server but an application from Project A and Project B will not be
+deployed to VMs that are running the same physical server. What feature of Compute
+Engine would you recommend?
+
+        a). Preemptible VMs
+        b). Sole-tenant nodes
+        c). Managed instance groups
+        d). Shielded VMs
+
+        Correct: b 
+
+        Explanation:
+            Sole-tenant nodes provide for exclusive access to a physical server. Shielded VMs provide
+            additional security protections but do not guarantee sole-tenancy. Managed instance groups is a
+            set of identically configured VMs. Preemptible VMs are low cost VMs that may be shutdown at
+            any time by Google. 
+    Reference: <a target="_blank" href=https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes>https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes</a>
+
+    ---
+
+48. A team of data scientists wants to migrate an on premises Spark cluster to Google Cloud.
+They would like to use a managed service. What GCP service would you recommend?
+
+        a). Cloud Dataproc
+        b). Cloud Dataflow
+        c). Cloud Bigtable
+        d). Cloud Data Studio
+
+        Correct: a
+
+        Explanation:
+            Cloud Dataproc is a managed Spark/Hadoop cluster service. Cloud Data Studio is a reporting
+            and analytics tool. Cloud Dataflow is a batch and stream processing platform. Cloud Bigtable is
+            a NoSQL database.
+    Reference: <a target="_blank" href=https://cloud.google.com/dataproc/docs/concepts/overview>https://cloud.google.com/dataproc/docs/concepts/overview</a>
+
+    ---
+
+49. You would like to use SSH host keys on your VMs to improve security. What feature of
+Compute Engine VMs do you need to enable to store SSH host keys?
+
+        a). Shielded VMs
+        b). labels
+        c). Sole-tenant nodes
+        d). guest attributes
+
+        Correct: d
+
+        Explanation:
+            The correct answer is guest attributes. When guest attributes are enabled, Compute Engine will
+            store your generated host keys as guest attributes. Sole-tenant nodes provides for exclusive
+            access to a physical server. Shielded VMs provide additional security protections but do not
+            guarantee sole-tenancy. Labels allow you to specify key-value pairs for grouping resources, for
+            example, a VM cloud be labeled with the key value pair 'envior:production.'
+    Reference: <a target="_blank" href=https://cloud.google.com/solutions/connecting-securely>https://cloud.google.com/solutions/connecting-securely</a>
+
+    ---
+
+50. You are running several services in Cloud Run. You will need to programmatically
+determine the name of the configuration that created the container. Where would you find this?
+
+        a). In the container startup script
+        b). In the service startup script
+        c). In the K_Configuration environment variable
+        d). In the VM instance metadata
+
+        Explanation:
+            When Cloud Run starts a container, it creates environment variables: K_Configuration,
+            K_Revision, K_Service, and Port. K_Configuration specifies the configuration that created the
+            container. When using Docker containers, you specify a command to execute on startup using
+            the CMD command in a Dockerfile configuration. Container startup or service startup scripts do
+            not necessarily set a standard environment variable for storing metadata, such as the name of the
+            configuration used with Cloud Run. VM instance data is incorrect because Cloud Run is
+            serverless and we do not have access to underlying VMs. 
+    Reference: <a target="_blank" href=https://cloud.google.com/run/docs/reference/container-contract>https://cloud.google.com/run/docs/reference/container-contract</a>
+
+---     
+[<h3 style="text-align: center;font-family: cursive;">Next Page</h3>](gcp-ace-3.md) 
 
 ---         
 <br>
