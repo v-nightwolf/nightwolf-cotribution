@@ -622,14 +622,14 @@ configure the managed instance group?
 user acceptance testing has succeeded, and you want to build a new App Engine application
 to serve as your performance testing environment. What should you do?
 
-	a). Configure a Deployment Manager YAML template to copy the application from the development GCP
-	    project into the performance testing GCP project.
-	b). Create a new GCP project for the performance testing environment using gcloud and copy the application
-	    from the development GCP project into the performance testing GCP project.
-	c). Create a new GCP project for the performance testing environment using gcloud and deploy your App
-	    Engine application to the new GCP project.
-	d). Use gcloud to deploy the application to a new performance testing GCP project by specifying the 
-	    --project parameter. Select Yes when prompted for confirmation on creating a new project.
+        a). Configure a Deployment Manager YAML template to copy the application from the development GCP
+            project into the performance testing GCP project.
+        b). Create a new GCP project for the performance testing environment using gcloud and copy the application
+            from the development GCP project into the performance testing GCP project.
+        c). Create a new GCP project for the performance testing environment using gcloud and deploy your App
+            Engine application to the new GCP project.
+        d). Use gcloud to deploy the application to a new performance testing GCP project by specifying the 
+            --project parameter. Select Yes when prompted for confirmation on creating a new project.
 
         Correct: c
 
@@ -644,6 +644,7 @@ to serve as your performance testing environment. What should you do?
 		$ gcloud app deploy ~/my_app/app.yaml --project=PROJECT
 
     Reference: <a target="_blank" href=https://cloud.google.com/sdk/gcloud/reference/app/deploy>https://cloud.google.com/sdk/gcloud/reference/app/deploy</a>
+
 
     Reference: <a target="_blank" href=></a>
     Reference: <a target="_blank" href=></a>
