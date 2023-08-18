@@ -1052,6 +1052,8 @@ determine the name of the configuration that created the container. Where would 
         c). In the K_Configuration environment variable
         d). In the VM instance metadata
 
+        Correct: c
+
         Explanation:
             When Cloud Run starts a container, it creates environment variables: K_Configuration,
             K_Revision, K_Service, and Port. K_Configuration specifies the configuration that created the

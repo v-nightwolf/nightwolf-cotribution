@@ -73,7 +73,7 @@ transforming, storing and analyzing this data in GCP platform. What GCP services
         d). Cloud Pub/Sub for ingesting, Cloud Storage for transforming, BigQuery for storing and
             Cloud Bigtable for analyzing the time-series data.
 
-        Coorect: c
+        Correct: c
 
         Explanation:
             For ingesting time series data, your best bet is Cloud Pub/Sub. For processing the data in
@@ -426,7 +426,7 @@ manage objects and buckets in your GCP project. What role should you grant them?
         c). Grant the data custodian team Storage Admin IAM role.
         d). Grant the data custodian team Project Editor IAM role. 
 
-        Coorect: c
+        Correct: c
 
         Explanation:
             This role grants full control of buckets and objects. When applied to an individual bucket, control
@@ -618,8 +618,33 @@ configure the managed instance group?
 
     ---
 
-21. 
-    Reference: <a target="_blank" href=></a>
+21. You are developing a simple application in App Engine Standard service. Unit testing and
+user acceptance testing has succeeded, and you want to build a new App Engine application
+to serve as your performance testing environment. What should you do?
+
+	a). Configure a Deployment Manager YAML template to copy the application from the development GCP
+	    project into the performance testing GCP project.
+	b). Create a new GCP project for the performance testing environment using gcloud and copy the application
+	    from the development GCP project into the performance testing GCP project.
+	c). Create a new GCP project for the performance testing environment using gcloud and deploy your App
+	    Engine application to the new GCP project.
+	d). Use gcloud to deploy the application to a new performance testing GCP project by specifying the 
+	    --project parameter. Select Yes when prompted for confirmation on creating a new project.
+
+        Correct: c
+
+        Explanation:
+	    You can deploy to a different project by using --project flag. By default, the service is deployed
+	    the current project configured via:
+
+		$ gcloud config set core/project PROJECT
+
+	    To override this value for a single deployment, use the --project flag:
+
+		$ gcloud app deploy ~/my_app/app.yaml --project=PROJECT
+
+    Reference: <a target="_blank" href=https://cloud.google.com/sdk/gcloud/reference/app/deploy>https://cloud.google.com/sdk/gcloud/reference/app/deploy</a>
+
     Reference: <a target="_blank" href=></a>
     Reference: <a target="_blank" href=></a>
     Reference: <a target="_blank" href=></a>
