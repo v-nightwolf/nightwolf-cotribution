@@ -1,7 +1,7 @@
 # Shell Scripting Interview Questions 
 
 <br>
-  We have prepared a set of questions to help Freshers and Experienced Linux Admins in their preparations for Shell Scripting Interview..
+  We have prepared a set of questions to help Freshers and Experienced Linux Admins in their preparations for Shell Scripting Interview.
   This list includes Google shell scripting interview questions for Linux (Infrastructure specialist), Amazon interview questions for Linux (Cloud Support Engineer - II) and other reputed firms as well. 
 
   You will find these questions very helpful in your Linux Admins interviews. Prepare well and All the very best.
